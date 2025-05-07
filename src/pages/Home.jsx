@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Nav from "../Nav";
-import Animation from "../animation";
+import Animation from "../Animation"
 import Load from "../Load";
 
 import decor from '../assets/decor/sirclePointsDecor.png';
