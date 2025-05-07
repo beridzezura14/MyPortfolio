@@ -1,15 +1,12 @@
 import { Link } from "react-router-dom";
 
 import Nav from "../Nav";
-import Loader from "../loader";
+import Load from "../Load";
+
 import web_1 from '../assets/portfolio-img/web_1.webp'
-
 import web_2 from '../assets/portfolio-img/web_2.webp'
-
 import web_3 from '../assets/portfolio-img/web_3.webp'
-
 import web_5 from '../assets/portfolio-img/web_5.webp'
-
 import web_6 from '../assets/portfolio-img/web_6.webp'
 import pizza from '../assets/portfolio-img/pizza.png'
 import salia from '../assets/portfolio-img/salia.png'
@@ -100,7 +97,7 @@ function Portfolio() {
     return (
         <div className="main__portfolio">
             <div className="loader__desktop">
-                <Loader />
+                <Load />
             </div>
             <div className="main__head">
                 <div className="point"></div> 

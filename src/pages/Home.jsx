@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Nav from "../Nav";
 import Animation from "../animation";
-import Loader from "../loader";
+import Load from "../Load";
 
 import decor from '../assets/decor/sirclePointsDecor.png';
 import decorTop from '../assets/decor/one-decor.png';
@@ -15,7 +15,7 @@ function Home() {
     return (
         <div className="main__home">
             <div className="loader__desktop">
-                <Loader />
+                <Load />
             </div>
             <Nav />
             <div className="home">

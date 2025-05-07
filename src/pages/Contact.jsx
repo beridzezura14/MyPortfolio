@@ -1,5 +1,5 @@
 import Nav from "../Nav";
-import Loader from "../loader";
+import Load from "../Load";
 import phone from '../assets/icon/phone.png'
 import email from '../assets/icon/email.png'
 import map from '../assets/icon/map.png'
@@ -9,7 +9,7 @@ function Contact() {
     return (
         <div className="main__contact">
             <div className="loader__desktop">
-                <Loader />
+                <Load />
             </div>
             <div className="main__head">
                 <div className="point"></div> 

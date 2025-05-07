@@ -1,5 +1,5 @@
 import Nav from "../Nav";
-import Loader from "../loader";
+import Load from "../Load";
 
 import me from '../assets/me.jpg'
 
@@ -112,7 +112,7 @@ function About() {
     return (
         <div className="main__about">
             <div className="loader__desktop">
-                <Loader />
+                <Load />
             </div>
             <div className="main__head">
                 <div className="point"></div> 

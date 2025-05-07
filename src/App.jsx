@@ -2,7 +2,7 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-import Loader from "./loader";
+import Load from "./Load";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 
 
     <div>
-      <Loader />
+      <Load />
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
