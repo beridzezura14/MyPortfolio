@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=SUSE:wght@100..800&display=swap');
+
+
+$orange: #FF5722;
+$orange-light-2x: #ffe4dc;
+
+$gray-dark: #333333;
+$gray-light: #575757;
+$grey: #dfdfdf;
+$light: #f8f9fa;
+$light-2x: #f3f3f3;
+$light-3x: #e6e6e6;
+$light-4x: #c9c9c9;
+
+$grey-2x: #f1f1f19f;
+
+
+$orange-light: #fffaf0;
+
+$rain: #b9b9b956;
+$rain-orange: #ff562286;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.btn{
+    cursor: pointer;
+    border: none;
+    background-color: $orange;
+    padding: 12px 25px;
+    font-size: 16px;
+    color: $light;
+    border-radius: 5px;
+    position: relative;
+    z-index: 111;
+}
+
+//  -------------------------------------
+//  style navigation space
+//  -------------------------------------
+.loader__desktop{
+    display: none;
+}
+
+
+.loader{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    animation: hide .8s ease forwards;
+    animation-delay: .8s;
+    
+    .left__side{
+        z-index: 11111111111;
+        position: fixed;
+        width: 50%;
+        height: 100dvh;
+        background-color: $gray-dark;
+    }
+    .right__side{
+        position: fixed;
+        z-index: 11111111111;
+        right: 0;
+        width: 50%;
+        height: 100dvh;
+        background-color: $gray-dark;
+    }
+}
+@keyframes hide {
+    from{
+        display: block;
+    }
+    to{
+        display: none;
+    }
+}
+
+
+.navigation{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: hidden;
+    height: 100dvh;
+    
+    .burger{
+        // background-color: main.$orange-light;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 1.5rem;
+        z-index: 1;
+        cursor: pointer;
+        z-index: 11111111111;
+        position: fixed;
+        
+        .line{
+            height: 3px;
+            width: 33px;
+            border-radius: 10px;
+            background-color: $gray-dark;
+            transition: .5s;
+        }
+        .line_2{
+            width: 23px;
+        }
+        
+
+        .line_1.active{
+            background-color: $light;
+            transition: .5s;
+            transform: rotate(-45deg) translateY(1px) translateX(-2px);
+        }
+        .line_2.active{
+            transition: .5s;
+            opacity: 0;
+        }
+        .line_3.active{
+            background-color: $light;
+            transition: .5s;
+            transform: rotate(45deg) translateY(-9px) translateX(-10px);
+        }
+
+
+    }
+
+
+    .navigation__info__link{
+        position: absolute;
+        background-color: $gray-dark;
+        width: 100%;
+        height: 100dvh;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        overflow-y: auto; 
+        z-index: 1111111111;
+        position: fixed;
+
+        // transform: translateX(-100%);
+
+                
+        .nav__link{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 5rem 1.5rem;
+            
+            .link{
+                color: $light;
+                font-size: 24px;
+                width: 100%;
+                border-bottom: 1px solid $gray-light;
+                padding-bottom: 10px;
+                font-family: "IBM Plex Mono", monospace;
+                font-weight: 800;
+                cursor: pointer;
+            }
+        }
+        .nav__info{
+            position: absolute;
+            bottom: 4rem;
+            right: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            margin-top: 2rem;
+            font-family: "SUSE", sans-serif;
+
+            h2{
+                font-size: 32px;
+                color: $orange;
+            }
+            p{
+                margin-top: 1.5rem;
+                color: $light;
+                font-size: 18px;
+            }
+            a{
+                margin-top: 7px;
+                color: $light; 
+                font-size: 18px;
+
+            }
+            .icon{
+                margin-top: 7px;
+                display: flex;
+                gap: 5px;
+                
+                
+                a{
+                    border: 1px solid $orange;
+                    padding: 10px 10px 7px;
+                    border-radius: 5px;
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+
+    .navigation__info__link {
+        transform: translateX(100%);
+        transition: transform 0.5s ease;
+      
+        &.active {
+          transform: translateX(0%);
+        }
+      
+        &.closing {
+          transform: translateX(100%);      
+
+        }
+    }
+}
+
+
+@media (min-width: 768px){
+    .loader__desktop{
+        display: block;
+    }
+    
+}

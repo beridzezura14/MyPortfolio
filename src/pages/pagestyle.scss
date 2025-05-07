@@ -1,0 +1,623 @@
+@use '../main.scss';
+
+//  -------------------------------------
+//  style home page
+//  -------------------------------------
+.main__home{
+    .home{
+        background: linear-gradient(180deg, main.$orange-light, rgba(255, 255, 255, 0));
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "Playfair Display", serif;
+        overflow: hidden;
+    
+        .top__side{
+            position: absolute;
+            width: 200px;
+            // opacity: 0.5;
+            right: -25%;
+            top: 10%;
+            filter: brightness(0) saturate(100%) invert(67%) sepia(93%) saturate(5429%) hue-rotate(346deg) brightness(101%) contrast(101%);
+    
+        }
+        
+        .home__content{
+            max-width: 90%;
+            text-align: center;
+            display: grid;
+            gap: 1rem;
+            
+            h1{
+                // border: 1px solid red;
+                font-size: 50px;
+                color: main.$gray-dark;
+                font-weight: 400;
+                
+                
+                span{
+                    color: main.$orange;
+                }
+            }
+            p{
+                margin-top: 0.5rem;
+                font-family: "IBM Plex Mono", monospace;
+                line-height: 25px;
+                font-size: 16px;
+            }
+            .btn__home{
+                font-weight: 600;
+                position: relative;
+                z-index: 111111111 !important;
+            }
+    
+        }
+    
+        .bottom__left{
+            position: absolute;
+            bottom: -10rem;
+            left: -10rem;
+            animation: zoom 10s ease infinite;
+            filter: brightness(0) saturate(100%) invert(67%) sepia(93%) saturate(5429%) hue-rotate(346deg) brightness(101%) contrast(101%);
+        }
+    
+        @keyframes zoom {
+            100%{
+                transform: scale(1.1);
+            }
+            50%{
+                transform: scale(0.9);
+            }
+            0%{
+                transform: scale(1.1);
+            }
+        }
+    
+    
+        .home__nav__info{
+            display: none;
+        }
+
+    }
+
+}
+//  -------------------------------------
+//  style about page
+//  -------------------------------------
+.main__about{
+    background: linear-gradient(180deg, main.$orange-light, white);
+
+
+    .burger__other{
+        background-color: main.$gray-dark;
+
+        .line{
+            background-color: main.$light !important;
+        }
+    }
+    
+    .main__head{
+        position: absolute;
+        z-index: 1111;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .point{
+            width: 10px;
+            height: 30px;
+            background-color: main.$orange;
+        }
+        div{
+            font-size: 40px;
+            font-family: "SUSE", sans-serif;
+            font-weight: 600;
+
+            span{
+                color: main.$orange;
+            }
+        }
+    }
+    
+
+    .about{
+        position: absolute;
+        top: 4rem;
+        max-width: 90%;
+        margin-left: 5%;
+        width: 100%;
+        
+
+        .about__me{
+            margin-top: 2rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid main.$gray-light;
+            img{
+                width: 100%;
+                border-radius: 5px;
+                border-bottom-right-radius: 30%;
+            }
+
+            .about__me__content{
+                h2{
+                    font-size: 50px;
+                    margin-top: 1rem;
+                    color: main.$gray-dark;
+                    font-family: "Playfair Display", serif;
+                    font-weight: 400;
+                }
+                p{
+                    margin-top: 1rem;
+                    line-height: 25px;
+                    font-size: 18px;
+                    font-family: "SUSE", sans-serif;
+                }
+    
+                .personal__info{
+                    margin-top: 1rem;
+                    display: grid;
+                    gap: 7px;
+    
+                    .info{
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        
+    
+                        img{
+                            width: 20px;
+                            margin-top: 17px;
+                            filter: brightness(0) saturate(100%) invert(41%) sepia(30%) saturate(4311%) hue-rotate(347deg) brightness(105%) contrast(101%);
+                        }
+    
+                        .li__1{
+                            color: main.$gray-dark;
+                            opacity: 0.9;
+                            
+                            
+                        }
+    
+                        .li__3{
+                            color: main.$gray-dark;
+                            font-family: "IBM Plex Mono", monospace;
+                            font-weight: 600;
+                        }
+                    }
+                }
+        
+                .content__btn{
+                    margin-top: 3rem;
+        
+                    .contact__btn{
+                        font-size: 18px;
+                        font-family: "SUSE", sans-serif;
+                        font-weight: 700;
+                    }
+                }
+
+            }
+    
+            
+        }
+        .experience{
+            margin: 1.5rem 0;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid main.$gray-light;
+
+            h2{
+                font-size: 40px;
+                font-family: "Playfair Display", serif;
+                font-weight: 400;
+                color: main.$gray-dark;
+
+                span{
+                    color: main.$orange;
+                }
+            }
+
+
+            .exp__item__row{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 10px;
+                margin-top: 1.5rem;
+
+                .exp__item{
+                    border: 1px solid main.$orange-light;
+                    padding: 15px;
+                    border-radius: 8px;
+                    font-family: "SUSE", sans-serif;
+                    background-color: main.$light-2x;
+
+                    h3{
+                        color: main.$gray-dark;
+                        font-size: 24px;
+                    }
+                    .exp__position{
+                        margin-top: 1.5rem;
+                        font-size: 18px;
+                    }
+                    .exp__date{
+                        color: main.$orange;
+                        margin-top: 5px;
+                        font-size: 16px;
+
+
+                    }
+                }
+            }
+
+        }
+
+        .skills{
+            margin: 2rem 0 4rem 0;
+            font-family: "SUSE", sans-serif;
+            h2{
+                font-size: 40px;
+                font-family: "Playfair Display", serif;
+                font-weight: 400;
+                color: main.$gray-dark;
+
+                span{
+                    color: main.$orange;
+                }
+            }
+
+            .skills__info{
+                // border: 1px solid red;
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .name__percentage{
+                    font-size: 18px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    div{
+                        margin-top: 7px;
+                        margin-bottom: 7px;
+                    }
+                }
+
+                .percentage__line{
+                    width: 100%;
+                    height: 4px;
+                    background: main.$grey;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+}
+//  -------------------------------------
+//  style portfolio page
+//  -------------------------------------
+.main__portfolio{
+    background: linear-gradient(180deg, main.$orange-light, white);
+    .burger__other{
+        background-color: main.$gray-dark;
+
+        .line{
+            background-color: main.$light !important;
+        }
+    }
+    .main__head{
+        position: absolute;
+        z-index: 1111;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .point{
+            width: 10px;
+            height: 30px;
+            background-color: main.$orange;
+        }
+        div{
+            font-size: 40px;
+            font-family: "SUSE", sans-serif;
+            font-weight: 600;
+
+            span{
+                color: main.$orange;
+            }
+        }
+    }
+
+    .portfolio{
+        position: absolute;
+        top: 0;
+        padding: 7rem 5% 3rem;
+
+        .marquee{
+            display: none;
+        }
+        .git__portfolio__row{
+            width: 100%;
+
+
+            h2{
+                font-family: "Playfair Display", serif;
+                font-weight: 400;
+                font-size: 45px;
+
+                span{
+                    color: main.$orange;
+                }
+            }
+
+            .git__portfolio__row--p{
+                font-family: "SUSE", sans-serif;
+                font-size: 16px;
+                line-height: 25px;
+            }
+            .items{
+                margin: 3rem 0;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 1.5em;
+
+
+                .item{
+                    border-bottom: 1px solid rgba(99, 99, 99, 0.2) ;
+                    padding-bottom: 1.5rem ;
+                    width: 100%;
+
+                    .show{
+                        font-family: "Playfair Display", serif;
+                        font-weight: 700;
+                        font-size: 27px;
+                        margin-top: 0rem;
+                        color: main.$gray-dark;
+                        span{
+                            font-family: "SUSE", sans-serif;
+                            color: main.$gray-dark;
+                            font-size: 17px;
+                            margin-right: 7px;
+                            font-weight: 700;
+                        }
+                    }
+                    .marquee__overflow{
+                        display: none;
+                    }
+                    img{
+                        margin-top: 1rem;
+                        width: 100%;
+                        border-radius: 5px;
+                        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                    }
+
+                    .languages{
+                        margin-top: 1rem;
+                        display: flex;
+                        gap: 10px;
+
+                        span{
+                            color: main.$gray-dark;
+                            font-family: "SUSE", sans-serif;
+                        }
+                    }
+                    .visit{
+                        margin-top: 1rem;
+                        color: rgb(0, 174, 255);
+                        padding: 0;
+                        outline: none;
+                        background: none;
+                        border: none;
+                        font-size: 17px;
+                        text-decoration: underline;
+                    }
+
+                    .mobile{
+                        margin-left: 7px;
+                    }
+
+                }
+            }
+        }
+
+        .github{
+            font-size: 18px;
+            font-family: "SUSE", sans-serif;
+            a{
+                color: rgb(0, 174, 255);
+                text-decoration: underline;
+                margin-left: 7px;
+            }
+        }
+    }
+    
+}
+//  -------------------------------------
+//  style contact page
+//  -------------------------------------
+.main__contact{
+    background: linear-gradient(180deg, main.$orange-light, white);
+    .burger__other{
+        background-color: main.$gray-dark;
+
+        .line{
+            background-color: main.$light !important;
+        }
+    }
+    .main__head{
+        position: absolute;
+        z-index: 1111;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .point{
+            width: 10px;
+            height: 30px;
+            background-color: main.$orange;
+        }
+        div{
+            font-size: 40px;
+            font-family: "SUSE", sans-serif;
+            font-weight: 600;
+
+            span{
+                color: main.$orange;
+            }
+        }
+    }
+
+    .contact{
+        position: absolute;
+        top: 8rem;
+        max-width: 90%;
+        margin-left: 5%;
+        width: 100%;
+
+
+        .contact__info--call{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 3rem;
+            
+            div{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: main.$grey-2x;
+                height: 100px;
+
+                .div__img{
+                    position: absolute;
+                    padding: 10px;
+                    background-color: main.$orange;
+                    border-radius: 50%;
+                    height: 50px;
+                    width: 50px;
+                    top: -25px;
+
+                    img{
+                        position: relative;
+                        width: 20px;
+                        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(55deg) brightness(106%) contrast(101%);
+                    }
+                }
+
+                a, p{
+                    font-size: 18px;
+                    color: main.$gray-dark;
+                    font-family: "SUSE", sans-serif;
+                }
+
+
+            }
+        }
+        .contact__info--message{
+            margin: 3rem 0;
+            .soc__media{
+                .send__email{
+                    border-bottom: 0.5px solid main.$light-4x;
+                    padding-bottom: 1rem;
+                    order: 2;
+                    h3{
+                        font-size: 28px;
+                        font-family: "Playfair Display", serif;
+                        color: main.$gray-dark;
+                        font-weight: 400;
+
+                        span{
+                            color: main.$orange;
+                        }
+
+                    }
+                    p{
+                        margin-top: 0.7rem;
+                        font-size: 16px;
+                        font-family: "SUSE", sans-serif;
+                    }
+                }
+                .follow{
+                    order: 1;
+                    margin-top: 0.5rem;
+
+                    h3{
+                        font-size: 28px;
+                        font-family: "Playfair Display", serif;
+                        color: main.$gray-dark;
+                        font-weight: 400;
+
+                        span{
+                            color: main.$orange;
+                        }
+
+                    }
+
+                    div{
+                        margin-top: 1rem;
+                        display: flex;
+                        gap: 5px;
+                        
+                        
+                        a{
+                            border: 1px solid main.$orange;
+                            padding: 10px 10px 5px;
+                            border-radius: 5px;
+                            font-size: 21px;
+                            color: main.$gray-dark
+                        }
+                    }
+                }
+
+            }
+            form{
+                margin-top: 3rem;
+
+                div{
+                    display: grid;
+                    gap: 1rem;
+
+                    input{
+                        width: 100%;
+                        padding: 15px;
+                        font-family: "IBM Plex Mono", monospace;
+                        background-color: transparent;
+                        border: 1px solid main.$light-4x;
+                        font-size: 16px;
+                        color: main.$gray-dark;
+                        outline: none;
+                    }
+                }
+                textarea{
+                    margin: 1rem 0;
+                    width: 100%;
+                    height: 150px;
+                    padding: 15px;
+                    font-family: "IBM Plex Mono", monospace;
+                    background-color: transparent;
+                    border: 1px solid main.$light-4x;
+                    font-size: 16px;
+                    color: main.$gray-dark;
+                    outline: none;
+                }
+
+                .send__btn{
+                    font-family: "SUSE", sans-serif;
+                    font-weight: 700;
+                    padding: 12px 35px;
+                }
+            }            
+        }
+    }
+}
+
+
+
+
+
+

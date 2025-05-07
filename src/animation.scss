@@ -1,0 +1,163 @@
+@use './main.scss';
+     
+.rain{
+    height: 100dvh;
+    width: 100%;
+    position: absolute;
+    // z-index: 11111 !important;
+
+
+    .rain__1, .rain__2, .rain__3, .rain__4, .rain__5{
+        position: absolute;
+        top: 0;
+        height: 100dvh;
+        width: 1px;
+        background-color: main.$rain;
+        z-index: 11111111;
+
+
+
+        .rain__run__1, .rain__run__2, .rain__run__3, .rain__run__4, .rain__run__5{
+            width: 1px;
+            height: 5%;
+            background-color: main.$rain-orange;
+            animation: rainAnimation 15s linear infinite;
+
+        }
+        
+        .rain__run__2{
+            animation: rainAnimation 15.4s linear infinite;
+
+        }
+        .rain__run__3{
+            animation: rainAnimation 15.8s linear infinite;
+
+        }
+        .rain__run__4{
+            animation: rainAnimation 14.4s linear infinite;
+
+        }
+        .rain__run__5{
+            animation: rainAnimation 14.7s linear infinite;
+        }
+
+
+        @keyframes rainAnimation {
+            from {
+                transform: translateY(-100vh); /* თავიდან */
+            }
+            to {
+                transform: translateY(100vh); /* ბოლომდე ჩამოსვლა */
+            }
+        }
+    }
+    
+}
+
+
+
+.cube{
+    height: 100dvh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    background-color: transparent;
+
+
+    // display: flex;
+    
+    
+    .cube__1, .cube__2, .cube__3, .cube__4, .cube__5, .cube__6, .cube__7, .cube__8, .cube__9, .cube__10{
+        position: absolute;
+        border-radius: 10px;
+        background-color: rgba(255, 68, 0, 0.171);
+        transform: rotate(10deg);
+        top: 50px;
+        left: 0 !important;
+        z-index: 11111111;
+    }
+
+    .cube__1{
+        width: 70px;
+        height: 70px;
+        left: 3% !important;
+
+        animation: cubeAnimation 100s linear infinite;
+    }
+    .cube__2{
+        width: 35px;
+        height: 35px;
+        left: 17% !important;
+        animation: cubeAnimation 70s linear infinite;
+
+    }
+    .cube__3{
+        width: 50px;
+        height: 50px;
+        left: 25% !important;
+        animation: cubeAnimation 170s linear infinite;
+
+    }
+    .cube__4{
+        width: 150px;
+        height: 150px;
+        left: 25% !important;
+        animation: cubeAnimation 100s linear infinite;
+
+    }
+    .cube__5{
+        width: 50px;
+        height: 50px;
+        left: 45% !important;
+        animation: cubeAnimation 40s linear infinite;
+
+    }
+    .cube__6{
+        width: 80px;
+        height: 80px;
+        left: 55% !important;
+        animation: cubeAnimation 200s linear infinite;
+
+    }
+    .cube__7{
+        width: 30px;
+        height: 30px;
+        left: 65% !important;
+        animation: cubeAnimation 80s linear infinite;
+
+    }
+    .cube__8{
+        width: 120px;
+        height: 120px;
+        left: 65% !important;
+        animation: cubeAnimation 230s linear infinite;
+
+    }
+    .cube__9{
+        width: 70px;
+        height: 70px;
+        left: 80% !important;
+        animation: cubeAnimation 70s linear infinite;
+
+    }
+    .cube__10{
+        width: 40px;
+        height: 40px;
+        left: 88% !important;
+        animation: cubeAnimation 110s linear infinite;
+
+    }
+
+
+    @keyframes cubeAnimation {
+        from {
+            transform: translateY(100vh) rotate(-100deg); /* თავიდან */
+            
+        }
+        to {
+            transform: translateY(-100vh) rotate(100deg); /* ბოლომდე ჩამოსვლა */
+        
+        }
+    }
+}
