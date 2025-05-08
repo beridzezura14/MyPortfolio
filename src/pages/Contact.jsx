@@ -4,8 +4,24 @@ import phone from '../assets/icon/phone.png'
 import email from '../assets/icon/email.png'
 import map from '../assets/icon/map.png'
 
+import emailjs from 'emailjs-com';
 
 function Contact() {
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_ioghftk', 'template_4qjk1ba', e.target, 'PLtLjdGCG2kVPncCg')
+          .then((result) => {
+              console.log(result.text);
+              alert("Message Sent!");
+          }, (error) => {
+              console.log(error.text);
+              alert("Something went wrong.");
+          });
+    
+        e.target.reset();
+      };
     return (
         <div className="main__contact">
             <div className="loader__desktop">
@@ -54,13 +70,13 @@ function Contact() {
                                 </div>
                             </div>
                         </div>
-                        <form>
+                        <form onSubmit={sendEmail}>
                             <div>
-                                <input type="text" placeholder="YOUR NAME" />   
-                                <input type="text" placeholder="SUBJECT" />   
-                                <input type="email" placeholder="YOUR EMAIL" name="" id="" />
+                                <input type="text" name="name"placeholder="YOUR NAME"  required/>   
+                                <input type="text" name="subject" placeholder="SUBJECT" />   
+                                <input type="email" name="email" placeholder="YOUR EMAIL"  required/>
                             </div>
-                            <textarea placeholder="YOUR MESSAGE" name="" id=""></textarea>
+                            <textarea placeholder="YOUR MESSAGE" name="message" required></textarea>
                             <button className="btn send__btn">SEND</button>
                         </form>
                     </div>
