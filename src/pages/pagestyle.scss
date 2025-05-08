@@ -626,14 +626,14 @@
                         left: 20px;
                         width: 38px;
                         position: absolute;
-                        animation: send 2s ease-in forwards;
+                        animation: send .5s ease-in forwards;
                     }
                     @keyframes send {
                         from{
-                            left: 20px
+                            left: 90px
                         }
                         to{
-                            left: 165px;
+                            left: 160px;
                         }
                     }
                 }
