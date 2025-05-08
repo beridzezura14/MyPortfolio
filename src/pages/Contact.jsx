@@ -5,8 +5,11 @@ import email from '../assets/icon/email.png'
 import map from '../assets/icon/map.png'
 
 import emailjs from 'emailjs-com';
+import { useState } from "react";
+import send from '../assets/correct.png'
 
 function Contact() {
+    const [success, setSuccess] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -14,7 +17,11 @@ function Contact() {
         emailjs.sendForm('service_ioghftk', 'template_4qjk1ba', e.target, 'PLtLjdGCG2kVPncCg')
           .then((result) => {
               console.log(result.text);
-              alert("Message Sent!");
+                setSuccess(true);
+
+                setTimeout(() => {
+                    setSuccess(false);
+                }, 5000);
           }, (error) => {
               console.log(error.text);
               alert("Something went wrong.");
@@ -77,7 +84,17 @@ function Contact() {
                                 <input type="email" name="email" placeholder="YOUR EMAIL"  required/>
                             </div>
                             <textarea placeholder="YOUR MESSAGE" name="message" required></textarea>
-                            <button className="btn send__btn">SEND</button>
+
+                            <div className="sent_area">
+                                <button className="btn send__btn">SEND</button>
+                                {
+                                    success && (
+                                        <div>
+                                            <img src={send} alt="" />    
+                                        </div>
+                                    )
+                                }
+                            </div>
                         </form>
                     </div>
                 </div>

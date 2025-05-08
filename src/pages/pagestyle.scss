@@ -441,6 +441,8 @@
 //  -------------------------------------
 .main__contact{
     background: linear-gradient(180deg, main.$orange-light, white);
+
+
     .burger__other{
         background-color: main.$gray-dark;
 
@@ -606,10 +608,34 @@
                     outline: none;
                 }
 
-                .send__btn{
-                    font-family: "SUSE", sans-serif;
-                    font-weight: 700;
-                    padding: 12px 35px;
+                .sent_area{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    // border: 1px solid;
+                    position: relative;
+
+                    .send__btn{
+                        font-family: "SUSE", sans-serif;
+                        font-weight: 700;
+                        padding: 12px 35px;
+                        width: 150px;
+                    }
+                    img{
+                        top: 2.5px;
+                        left: 20px;
+                        width: 38px;
+                        position: absolute;
+                        animation: send 2s ease-in forwards;
+                    }
+                    @keyframes send {
+                        from{
+                            left: 20px
+                        }
+                        to{
+                            left: 165px;
+                        }
+                    }
                 }
             }            
         }
